@@ -9,10 +9,12 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Entity // 이게 있어야 테이블이 만들어진다
 public class User {
