@@ -12,9 +12,11 @@ import com.cos.blogapp2.domain.user.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter // 템플릿 엔진에 나중에 뿌릴때 이거 없으면 EL 표현식으로 뿌릴수가 없다
 @Entity
 public class Board {

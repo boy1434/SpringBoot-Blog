@@ -1,6 +1,9 @@
 package com.cos.blogapp2.web;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,7 +33,11 @@ public class BoardController {
 		
 	// 글 전체 목록으로 이동
 	@GetMapping("/board")
-	public String list() {
+	public String list(Model model) {
+		
+		List<Board> boardsEntity = boardRepository.findAll();
+		model.addAttribute("boardsEntity", boardsEntity);
+		
 		return "board/list";
 	}
 	
